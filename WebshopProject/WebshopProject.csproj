@@ -134,8 +134,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CustomStyleSheet.css" />
-    <Content Include="Content\Images\Movie Pic\Central Intelligence.jpg" />
-    <Content Include="Content\Images\Movie Pic\Jason_Bourne_%28film%29.jpg" />
     <Content Include="Content\Images\Untitled.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -932,6 +930,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704191156088_FirstMigration.cs" />
+    <Compile Include="Migrations\201704191156088_FirstMigration.Designer.cs">
+      <DependentUpon>201704191156088_FirstMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ModelClass.cs" />
     <Compile Include="Models\IdentityClass.cs" />
@@ -959,7 +961,14 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704191156088_FirstMigration.resx">
+      <DependentUpon>201704191156088_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Images\Movie Pic\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

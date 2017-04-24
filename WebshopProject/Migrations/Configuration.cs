@@ -42,7 +42,7 @@ namespace WebshopProject.Migrations
                 new Movie { MovieName = "Jason Bourne ", MovieDescription = "Jason Bourne is a 2016 American action thriller film directed by Paul Greengrass written by Greengrass and Christopher Rouse. In this fifth installment of the Jason Bourne film series and direct sequel to 2007's The Bourne Ultimatum, Matt Damon reprises his role as the main character, former CIA assassin and psychogenic amnesiac Jason Bourne. " ,Cost=185, CategoryId = categorys.SingleOrDefault(i => i.CategoryName=="Action").Id ,MovieImage="Images/Movie Pic/Jason_Bourne_(film).jpg" ,Quantity=10},
 
                   };
-        moviess.ForEach(s => context.Movie.AddOrUpdate(p => p.MovieName, s));
+            moviess.ForEach(s => context.Movie.AddOrUpdate(p => p.MovieName, s));
             context.SaveChanges();
 
 

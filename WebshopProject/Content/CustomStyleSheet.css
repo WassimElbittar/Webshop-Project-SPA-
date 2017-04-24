@@ -6,3 +6,8 @@
     width: 190px;
     margin-top: 10px;
    }
+.carousel-inner >.item > img,
+.carousel-inner >.item > a > img {
+            width:85%;
+            margin: auto;
+        }
