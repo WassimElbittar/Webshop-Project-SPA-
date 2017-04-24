@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="~/Content/CustomStyleSheet.css" />
 </head>
 
-<body ng-app="shopApp">
+<body ng-app="shopApp" ng-controller="IndexCtrl">
 
     @* Bootstrap container for page fluidity *@
     <div class="container">
@@ -49,8 +49,8 @@
 
                 <div class="panel-group col-md-3 col-md-offset-1">
                     <div class="panel panel-success">
-                        <div class="panel-heading"><i>The cart is empty</i></div>
-                        <div class="panel-body"></div>
+                        <div class="panel-heading"><i>{{message}}</i></div>
+                        <div ng-repeat="m in movies" class="panel-body">{{m.title}}</div>
                     </div>
                 </div>
 

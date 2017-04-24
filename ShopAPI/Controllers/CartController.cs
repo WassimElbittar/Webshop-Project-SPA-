@@ -16,13 +16,13 @@ namespace ShopAPI.Controllers
         // GET api/Cart
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "movie1", "movie2" };
         }
 
         // GET api/Cart/5
         public string Get(int id)
         {
-            return "value";
+            return "movie";
         }
 
         // POST api/Cart
