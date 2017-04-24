@@ -12,10 +12,10 @@
         </div>
 
         <div>
-            <form>
-                <label>Add to cart: </label>
-                <input type="button" name="Buy" id="Buy" value="Buy">
-            </form>
+            @using (Html.BeginForm("Post", "Cart", FormMethod.Post))
+            {
+                <input type="submit" name="addToCart" id="addToCart" value="Add to Cart" />
+            }
         </div>
 
     </div>
