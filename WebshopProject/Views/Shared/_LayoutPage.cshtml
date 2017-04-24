@@ -1,10 +1,28 @@
-﻿<reference path="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></reference>
+﻿<reference path="~/Scripts/bootstrap.min.js"></reference>
+@using System.Web.Optimization
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title</title>
+
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.11.1/validate.min.js"></script>*@
+    <script src="~/Scripts/validate.min.js"></script>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>*@
+    <script src="~/Scripts/angular.min.js"></script>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>*@
+    <script src="~/Scripts/angular-route.js"></script>
+
+    @* Our custom Javascript goes in these files *@
+    <script src="~/AngularRouting.js"></script>
+    <script src="~/CustomJavaScript.js"></script>
+    @* CSS files *@
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    @* Our custom CSS goes in this file *@
+    <link rel="stylesheet" type="text/css" href="~/Content/CustomStyleSheet.css" />
 </head>
 <body class="container-fluid"
       style="background-color: #0E0B16;
@@ -57,5 +75,7 @@
     <footer class="navbar-fixed-bottom text-center" style="background-color: black; color:white">
         <p>Angular Movies © 2017 | PFinnfors WassimElBittar maher2u</p>
     </footer>
+
+    @Scripts.Render("~/Scripts/ThirdParty")
 </body>
 </html>
