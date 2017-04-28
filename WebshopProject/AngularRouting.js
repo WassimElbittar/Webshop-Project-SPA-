@@ -22,5 +22,5 @@
 
             $scope.message = "Welcome to the Main Controller!";
         });
-    
+ 
 })();
