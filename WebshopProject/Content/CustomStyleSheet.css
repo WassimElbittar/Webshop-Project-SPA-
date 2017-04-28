@@ -1,8 +1,14 @@
-﻿body {
-    margin: 0px auto;
-    width: 1024px;
+﻿body
+{
+ margin:0px auto;
+ width:100%;height:100%;
 }
-
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
 .log-size {
     width: 190px;
     margin-top: 10px;
@@ -10,4 +16,37 @@
 
 .minList {
     list-style: none;
+}
+.carousel .item {
+  height: 360px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height:300px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color:#f2f2f2;
+    font-family:Arial;
+}
+
+th, td {
+    text-align:center;
+    padding: 8px;
+    color:#073a5f;
+}
+tr:nth-child(even){background-color:wheat}
+
+th {
+    background-color:#073a5f;
+    color:wheat;
+    font-weight:bolder;
+}
+
+hr {
+    border: none;
 }

@@ -24,54 +24,41 @@
     @* Our custom CSS goes in this file *@
     <link rel="stylesheet" type="text/css" href="~/Content/CustomStyleSheet.css" />
 </head>
-<body class="container-fluid"
-      style="background-color: #0E0B16;
-      background-image: url('http://i68.tinypic.com/k0j6s3.jpg');
-      background-clip:content-box;
+<body style="background: url('http://i66.tinypic.com/ka04u9.jpg') no-repeat center center fixed;
+      background-size: 100% 100%;
       color: white">
-    <content>
         @* Shop Header with two rows *@
         <header>
-            <div class="row">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-inverse">
-
-                        <div class="navbar-header">
-
-                            <div class="col-md-3">
-                                <img class="log-size" src="~/Content/Images/AngLogo.png" />
-                            </div>
-
-                            <div class="col-md-4 col-md-offset-1">
-                                <p style="color:#F0A830"><i><b>Movies so sharp you wouldn't let your kids run with them</b></i></p>
-                            </div>
-
-                            <div class="col-md-4">
-                                <form action="@Url.Action("Search", "Home")" method="get">
-                                    <div class="form-group">
-                                        <input type="search" placeholder="Movies" name="search" id="search">
-                                        <button type="button" class="btn btn-success btn-sm" name="searchBtn" id="searchBtn">Search</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div>
-                                <img url="65.tinypic.com/29ljxjs.jpg" />
-                            </div>
-                        </div>
-                    </nav>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"></a>
+                        <img src="http://i63.tinypic.com/4ht992.jpg" />
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active">@Html.ActionLink("Movies", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Available Movies", "type", "Home")</li>
+                            <li>@Html.ActionLink("Contact us", "Contact", "Home")</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </header>
+          </header>
 
         <div class="row">
             
-            <div class="container col-md-12">
+            <div class="col-md-12">
                 @* index.cshtml loads here *@
                 @RenderBody()
             </div>
 
         </div>
-    </content>
     @* This is the Footer of the shop *@
     <footer class="navbar-fixed-bottom text-center" style="background-color:#1c6c6c; color:white">
         <p>Angular_Movies©Copyright @DateTime.Now.ToString("dd-MM-yyyy") | PFinnfors WassimElBittar maher2u</p>

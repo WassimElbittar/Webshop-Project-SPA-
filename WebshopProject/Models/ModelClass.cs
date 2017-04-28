@@ -45,13 +45,13 @@ namespace WebshopProject.Models
         public virtual Movie Movies { get; set; }
 
         public int CustumertId { get; set; }
-        public virtual Custumer Custumers { get; set; }
+        public virtual Customer Custumers { get; set; }
 
         public int TotalCost { get; set; }
         public DateTime OrderPlaced { get; set; }
 
     }
-    public class Custumer
+    public class Customer
     {
         [Key]
         public int Id { get; set; }
@@ -85,7 +85,7 @@ namespace WebshopProject.Models
 
         public DbSet<Movie> Movie { get; set; }
         public DbSet<Category> Category { get; set; }
-        public DbSet<Custumer> Custumer { get; set; }
+        public DbSet<Customer> Custumer { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<Cart> Cart { get; set; }
     }
