@@ -11,7 +11,7 @@ namespace ShopAPI.Controllers
     public class CartController : ApiController
     {
         //Webshop database model
-        private ModelClass db = new ModelClass();
+      
 
         // GET api/Cart
         public IEnumerable<string> Get()

@@ -10,22 +10,30 @@ namespace WebshopProject.Controllers
     
     public class HomeController : Controller
     {
+        MoviesDatabaseEntities db = new MoviesDatabaseEntities();
         // GET: Home/Index
         public ActionResult Index()
         {
             //My idea is we will use this standard MVC model on index.cshtml, and AngularJS data in product views
-            ModelClass shopModel = new ModelClass();
+           
 
-            return View(shopModel);
+            return View();
         }
 
         [HttpGet]
-        public ActionResult Search(ModelClass shopModel, string search)
+        public ActionResult Search(string search)
         {
             //Code for search results
-            shopModel.Search = search;
+          
 
-            return View(shopModel);
+            return View();
+        }
+
+        public ActionResult Type()
+        {
+            var model = from movie in db.Movies
+                        select movie;
+            return View(model.ToList());
         }
     }
 }

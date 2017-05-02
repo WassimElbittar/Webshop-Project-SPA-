@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebshopProject.Movie>
+
+@{
+    ViewBag.Title = "Type";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>Type</h2>
+
+<table class="table-bordered">
+    <tr>
+        <th class="col-md-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th class="col-md-3">
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th class="col-md-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th class="col-md-2">
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th  class="col-md-2">Buy & Enjoy</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            <img src="@Html.DisplayFor(modelItem => item.Image)" />
+        </td>
+        <td>
+            @Html.ActionLink("Buy", "Buy", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
